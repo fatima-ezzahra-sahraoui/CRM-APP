@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"
+       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="template1">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Customers</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<div layout:fragment="content1">
+<div class="col-md-6 offset-3">
+<form method="post" th:action="@{save(page=${page}, Keyword=${Keyword})} ">
+<div>
+<label >ID</label>
+<input  class="form-control" type="text" name="id" th:value="${customer.id}">
+<span class="text-danger" th:errors="${customer.id}"></span>
+</div>
+
+
+<div>
+<label >firstName</label>
+<input  class="form-control" type="text" name="firstName" th:value="${customer.firstName}">
+<span class="text-danger" th:errors="${customer.firstName}"></span>
+</div>
+
+
+<div>
+<label>lastName</label>
+<input  class="form-control" type="text" name="lastName" th:value="${customer.lastName}">
+<span class="text-danger" th:errors="${customer.lastName}"></span>
+</div>
+
+
+
+
+<div>
+<label>email</label>
+<input  class="form-control" type="text" name="email" th:value="${customer.email}">
+<span class="text-danger" th:errors="${customer.email}"></span>
+</div>
+
+
+
+
+<div>
+<label>adresse</label>
+<input  class="form-control" type="text" name="adresse" th:value="${customer.adresse}">
+<span class="text-danger" th:errors="${customer.adresse}"></span>
+</div>
+
+
+
+<div>
+<label>ville</label>
+<input  class="form-control" type="text" name="ville" th:value="${customer.ville}">
+<span class="text-danger" th:errors="${customer.ville}"></span>
+</div>
+
+
+<div>
+<label>pays</label>
+<input  class="form-control" type="text" name="pays" th:value="${customer.pays}">
+<span class="text-danger" th:errors="${customer.pays}"></span>
+</div>
+
+
+
+<div>
+<label>telephone</label>
+<input  class="form-control" type="text" name="telephone" th:value="${customer.telephone}">
+<span class="text-danger" th:errors="${customer.telephone}"></span>
+</div>
+<button type="submit" class="btn btn-primary">save</button>
+
+</form>
+</div>
+</div>
+</body>
+</html>
